@@ -1,0 +1,21 @@
+a:link {
+  color: tan;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: tan;
+}
+
+a:hover {
+  color: #75140c;
+}
+
+a:active {
+  color: red;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
