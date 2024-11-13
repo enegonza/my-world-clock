@@ -6,13 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Clock by ene gonza</title>
   <link rel="stylesheet" href="src/styling.css" type="text/css" href="style.css">
-
-
-
-
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.46/moment-timezone-with-data-1970-2030.min.js"></script>
 </head>
 
 <body>
@@ -20,70 +16,65 @@
     <h1> <strong>World Clock</strong></h1>
     <select name="" id="">
       <option value=""> Select a city..</option>
-      <option value="Asia/Gaza"> Mexico City</option>
-      <option value="Asia/Gaza">Dublin </option>
-      <option value="America/Chicago">Barcelona</option>
-      <option value="Asia/Toyko">Athens</option>
-      <option value="America/Mexico_City">Cape Town</option>
-      <option value="Asia/Toyko">Jakarta</option>
+      <option value="America/Mexico_City"> Mexico City</option>
+      <option value="Europe/Dublin">Dublin </option>
+      <option value="Europe/Barcelona">Barcelona</option>
+      <option value="Europe/Athens">Athens</option>
+      <option value="Africa/Cape_Town">Cape Town</option>
+      <option value="Asia/Jakarta">Jakarta</option>
 
     </select>
 
 
 
 
-    <div class="city">
+    <div class="city" id="chicago">
       <div>
         <h2>Chicago ✶</h2>
-        <div class="date"> Nov 12 2024
+        <div class="date">
         </div>
       </div>
-      <div class="time">6:55:09 <small>AM</small>
+      <div class="time">
       </div>
     </div>
 
-
-
-    <div class="city">
+    <div class="city" id="new-york">
       <div>
         <h2>New York 🇺🇸</h2>
-        <div class="date"> Nov 12 2024
+        <div class="date">
         </div>
       </div>
-      <div class="time">6:55:09 <small>AM</small>
+      <div class="time">
       </div>
     </div>
 
-
-
-    <div class="city">
-      <div>
-        <h2>Gaza 🇵🇸</h2>
-        <div class="date"> Nov 12 2024
-        </div>
-      </div>
-      <div class="time">6:55:09 <small>AM</small>
-      </div>
-    </div>
-
-    <div class="city">
+    <div class="city" id="sao-paulo">
       <div>
         <h2>Sao Paulo 🇧🇷</h2>
-        <div class="date"> Nov 12 2024
+        <div class="date">
         </div>
       </div>
-      <div class="time">6:55:09 <small>AM</small>
+      <div class="time">
       </div>
     </div>
 
-
-    <div class="city">
+    <div class="city" id="gaza">
       <div>
-        <h2>Sydney 🇦🇺</h2>
-        <div class="date"> Nov 12 2024
+        <h2>Gaza 🇵🇸</h2>
+        <div class="date">
         </div>
       </div>
-      <div class="time">6:55:09 <small>AM</small>
+      <div class="time">
+      </div>
+    </div>
+
+    <div class="city" id="sydney">
+      <div>
+        <h2>Sydney 🇦🇺</h2>
+        <div class="date">
+        </div>
+      </div>
+      <div class="time">
       </div>
     </div>
   </div>
@@ -99,11 +90,11 @@
       <strong>on Github</strong>
     </a>
     and hosted by
-    <a href="https://github.com/enegonza/my-world-clock">
+    <a href="https://soft-axolotl-world-clock.netlify.app" target="_blank" rel="noreferrer">
       <strong>Netlify</strong>
     </a>
   </footer>
-  <script src="src/script.js"></script>
+  <script src="src/index.js"></script>
 
 </body>
 
