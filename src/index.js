@@ -62,7 +62,7 @@ function selectedCity(event) {
         )} <small>${cityTime.format("A")}</small>
         </div>
    </div>
-   <a href="/"> Back to Main</a>
+   <center><small><a href="/"> Back to Main</a></small></center>
   `;
 }
 
