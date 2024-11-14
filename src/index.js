@@ -21,17 +21,6 @@ function updateTime() {
     "hh:mm:ss [<small>]A[</small>]"
   )} `;
 
-  //gaza
-  let gazaElement = document.querySelector("#gaza");
-  let gazaDateElement = gazaElement.querySelector(".date");
-  let gazaTimeElement = gazaElement.querySelector(".time");
-  let gazaTime = moment().tz("Asia/Gaza");
-
-  gazaDateElement.innerHTML = gazaTime.format("MMMM D, YYYY");
-  gazaTimeElement.innerHTML = `${gazaTime.format(
-    "hh:mm:ss [<small>]A[</small>]"
-  )} `;
-
   //sao paulo
   let saoPauloElement = document.querySelector("#sao-paulo");
   let saoPauloDateElement = saoPauloElement.querySelector(".date");
@@ -42,18 +31,30 @@ function updateTime() {
   saoPauloTimeElement.innerHTML = `${sPTime.format(
     "hh:mm:ss [<small>]A[</small>]"
   )} `;
+}
 
-  //sydney
-  let sydneyElement = document.querySelector("#sydney");
-  let sydneyDateElement = sydneyElement.querySelector(".date");
-  let sydneyTimeElement = sydneyElement.querySelector(".time");
-  let sydneyTime = moment().tz("Australia/Sydney");
+function selectedCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  let hmpgCities = document.querySelector("#hmpg-cities");
 
-  sydneyDateElement.innerHTML = sydneyTime.format("MMMM D, YYYY");
-  sydneyTimeElement.innerHTML = `${sydneyTime.format(
-    "hh:mm:ss [<small>]A[</small>]"
-  )} `;
+  hmpgCities.innerHTML = `
+  <div class="city">
+        <div>
+          <h2>${cityTimeZone}</h2>
+          <div class="date">${cityTime.format("MMMM D YYYY")}</div>
+        </div>
+        
+        <div class="time">${cityTime.format(
+          "hh:mm:ss"
+        )} <small>${cityTime.format("A")}</small>
+        </div>
+   </div>
+  `;
 }
 
 updateTime();
 setInterval(updateTime, 1000);
+
+let dropdownSelectElement = document.querySelector("#dropdown-cities");
+dropdownSelectElement.addEventListener("change", selectedCity);
