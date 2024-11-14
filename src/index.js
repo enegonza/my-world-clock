@@ -54,7 +54,7 @@ function selectedCity(event) {
   <div class="city">
         <div>
           <h2>${cityName}</h2>
-          <div class="date">${cityTime.format("MMMM D YYYY")}</div>
+          <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
         </div>
 
         <div class="time">${cityTime.format(
